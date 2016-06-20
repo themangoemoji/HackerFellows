@@ -1,18 +1,18 @@
 # Week 2
 
-## Agenda
+## Monday
 
-### Monday
+* Angular
 
-* Angular & Task Runners Curriculus
+* Task Runners [notes](https://github.com/wrightmhw/HackerFellows/tree/master/week2/task-runners-notes)
 
-### Tuesday
+## Tuesday
 
 * Angular Cont.
 
 * 2015 Hacker Fellows Panel
 
-### Wednesday
+## Wednesday
 
 * Angular Cont.
 
@@ -20,7 +20,7 @@
 
 * Python Crash Course & Present Projects
 
-### Thursday
+## Thursday
 
-### Friday
+## Friday
 
