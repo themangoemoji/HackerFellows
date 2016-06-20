@@ -6,13 +6,13 @@
 
 * [Grand Circus](http://www.grandcircus.co/)
 
-## [Week 1](https://github.com/wrightmhw/HackerFellows/tree/master/week2)
+## Week 1
 
 * [CSS/HTML About Me Site] (https://github.com/HF-Demos/AboutMe)
 
 * [Leaflet Demo] (https://github.com/HF-Demos/LeafletDemo)
 
-## Week 2
+## [Week 2](https://github.com/wrightmhw/HackerFellows/tree/master/week2)
 
 ## Week 3
 
