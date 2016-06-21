@@ -6,36 +6,42 @@
     <title>Angular Shopping Cart</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bitter|Open+Sans|Poiret+One|Roboto" rel="stylesheet">
 
   </head>
 
   <body ng-app="myModule" ng-controller="GroceryCtrl as main">
 
-    <h1>Angular Shopping Cart</h1>
+    <div id="header">
 
-    <h3 class="total">Total Price:</h3>
-    <p class="total">{{total|currency}}</p>
+      <h1 class="centered">Angular Shopping Cart</h1>
 
-    <div>
-
-      <!--inputs for item-->
-      <input type="text" ng-model="name" placeholder="Item Name">
-      <input type="number" ng-model="price" placeholder="Price">
-      <button ng-click="addItemToList()">Add Item To Grocery List</button>
-
-      <div ng-repeat="item in items track by $index">
-
-        <div class="item-row">
-
-          <li>{{item.name}} - {{item.price}}</li>
-
-          <!--<button ng-click="removeAll(items, $index)">Remove Item</button>-->
-          <i class="material-icons" ng-click="removeItem(items, $index">delete</i>
-
-        </div> <!--of item-row-->
+      <div class="centered">
+        <h3 class="total">{{total|currency}}</h3>
       </div>
 
     </div>
+
+    <div id="add-item centered">
+
+      <!--inputs for item-->
+      <input class="field centered" type="text" ng-model="name" placeholder="Item Name">
+      <input class="field centered" type="number" ng-model="price" placeholder="Price">
+      <i class="material-icons field centered add-icons" ng-click="addItemToList()">add_shopping_cart</i>
+
+    </div>
+
+    <ul>
+      <li ng-repeat="item in items track by $index">
+
+          <p>{{item.name}}</p>
+          <div class="float-right">
+            <p>{{item.price | currency}}</p>
+            <i class="material-icons delete-icons" ng-click="removeItem(items, $index)">remove_shopping_cart</i>
+          </div>
+
+      </li>
+    </ul>
 
     <!--JS Includes for Angular-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>

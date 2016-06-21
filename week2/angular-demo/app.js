@@ -2,17 +2,17 @@ var app = angular.module('myModule', []);
 
 app.controller('GroceryCtrl', function($scope) {
 
-  $scope.name = "";
+  $scope.name;
 
   $scope.price;
 
   $scope.total = 0.0;
 
   $scope.items = [
-    {
-      name: "apple",
-      price: 4.20
-    }
+  //{ name: "Pears", price: 1.43 },
+  //{ name: "Peaches", price: 4.22 },
+  //{ name: "Apples", price: 8.43 },
+  //{ name: "Crab Rangoon", price: 0.43 },
   ];
 
   //Called on button press
@@ -30,8 +30,12 @@ app.controller('GroceryCtrl', function($scope) {
   };
 
   //Remove an item
-  $scope.removeAll = function(array, index) {
+  $scope.removeItem = function(array, index) {
+
+    $scope.total -= array[index].price;
+
     array.splice(index, 1);
+
   };
 
 });

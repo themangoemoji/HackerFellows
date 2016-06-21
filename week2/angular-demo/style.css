@@ -1,12 +1,100 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2em;
+  margin: 0;
+  background-color: #F85658;
+  color: #222222;
+}
+
+#header {
+  background-color: #222222;
+  padding-bottom: 2em;
+  color: #FFFFFF;
+}
+
+h1 {
+  font-family: 'Poiret One', serif;
+  margin: 0em auto;
+  padding-bottom: 1em;
+  padding-top: 1em;
+  color: #fff;
+  background-color: #222222;
+}
+
+.total {
+  padding-top: 5em;
+}
+
+.centered {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.field {
+  display: block;
+  margin: 1em auto;
+}
+
 .item-row {
   display: flex;
   flex: row;
   margin: 2px;
+  padding: 1em;
+  padding-bottom: 0;
+  padding-top: 0;
 }
 
 .total {
   display:inline;
 }
 
-div {
+.material-icons {
+  color: #222222;
+  font-size: 36px;
 }
+
+.float-right {
+  float: right;
+}
+
+
+.delete-icons {
+  margin: auto 0;
+  padding: 0.4em;
+}
+
+.add-icons {
+  margin: auto 0;
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+  padding: 40px;
+  padding-top: 0px;
+}
+
+li {
+  font-size: 0.7em;
+  padding: 0.4em;
+  padding: 20px;
+}
+
+input {
+  font-size: 0.8em;
+  background-color: #F85658;
+  color: #222222;
+  border: none;
+  border-bottom: 1px solid black;
+  border-style: solid 1px black;
+  border-bottom-color: black;
+}
+
+p {
+  display: inline;
+  margin-bottom: 1em;
+}
+
+::-webkit-input-placeholder {
+   color: #222222;
+ }
