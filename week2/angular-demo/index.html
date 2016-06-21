@@ -2,24 +2,29 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Angular Shopping Cart</title>
   </head>
-  <body>
+  <body ng-app="myModule" ng-controller="GroceryCtrl as main">
 
-    <div ng-app="">
+    <h1>Angular Shopping Cart</h1>
 
-      <h3>Noun</h3>
-      <input type="text" ng-model="noun">
+    <!--inputs for item-->
+    <input type="text" ng-model="name">
+    <input type="number" ng-model="price">
 
-      <h3>Adjective</h3>
-      <input type="text" ng-model="adjective">
+    <button ng-click="addItemToList()">Add Item To Grocery List</button>
 
+    <div ng-repeat="item in items">
 
-      <h1>Samuel Ging has {{noun}} because he is a {{adjective}} person.</h1>
+      <h2>{{item.name}}, {{item.price}}</h2>
+
+      <h3>{{total|currency}}</h3>
 
     </div>
 
+    <!--JS Includes for Angular-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="app.js"></script>
 
   </body>
 </html>
