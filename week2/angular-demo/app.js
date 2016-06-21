@@ -4,9 +4,9 @@ app.controller('GroceryCtrl', function($scope) {
 
   $scope.name = "";
 
-  $scope.price = 0.0
+  $scope.price;
 
-  $scope.total = 0.0
+  $scope.total = 0.0;
 
   $scope.items = [
     {
@@ -22,6 +22,16 @@ app.controller('GroceryCtrl', function($scope) {
           price: $scope.price
         });
     $scope.total += $scope.price;
+  };
+
+  //Remove all items from list
+  $scope.removeAllItemsFromList = function() {
+    $scope.items.remove();
+  };
+
+  //Remove an item
+  $scope.removeAll = function(array, index) {
+    array.splice(index, 1);
   };
 
 });

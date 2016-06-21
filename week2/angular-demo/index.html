@@ -1,24 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
     <meta charset="UTF-8">
     <title>Angular Shopping Cart</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
   </head>
+
   <body ng-app="myModule" ng-controller="GroceryCtrl as main">
 
     <h1>Angular Shopping Cart</h1>
 
-    <!--inputs for item-->
-    <input type="text" ng-model="name">
-    <input type="number" ng-model="price">
+    <h3 class="total">Total Price:</h3>
+    <p class="total">{{total|currency}}</p>
 
-    <button ng-click="addItemToList()">Add Item To Grocery List</button>
+    <div>
 
-    <div ng-repeat="item in items">
+      <!--inputs for item-->
+      <input type="text" ng-model="name" placeholder="Item Name">
+      <input type="number" ng-model="price" placeholder="Price">
+      <button ng-click="addItemToList()">Add Item To Grocery List</button>
 
-      <h2>{{item.name}}, {{item.price}}</h2>
+      <div ng-repeat="item in items track by $index">
 
-      <h3>{{total|currency}}</h3>
+        <div class="item-row">
+
+          <li>{{item.name}} - {{item.price}}</li>
+
+          <!--<button ng-click="removeAll(items, $index)">Remove Item</button>-->
+          <i class="material-icons" ng-click="removeItem(items, $index">delete</i>
+
+        </div> <!--of item-row-->
+      </div>
 
     </div>
 

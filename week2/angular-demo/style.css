@@ -1,0 +1,12 @@
+.item-row {
+  display: flex;
+  flex: row;
+  margin: 2px;
+}
+
+.total {
+  display:inline;
+}
+
+div {
+}
