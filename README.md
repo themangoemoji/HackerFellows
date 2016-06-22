@@ -4,11 +4,9 @@
 
 ## Content
 
-* [CSS/HTML About Me Site] (https://github.com/HF-Demos/AboutMe)
-
-* [Leaflet Demo] (https://github.com/HF-Demos/LeafletDemo)
-
-* [Angular](https://github.com/wrightmhw/HackerFellows/Angular)
-
-  * [Angular Shopping Cart] ()
+* CSS/HTML 
+ * [About Me](https://github.com/HF-Demos/AboutMe)
+ * [Leaflet Demo] (https://github.com/HF-Demos/LeafletDemo)
+* [Angular](https://github.com/wrightmhw/HackerFellows/tree/master/Angular)
+  * [Angular Shopping Cart] (https://github.com/wrightmhw/HackerFellows/tree/master/Angular/shopping-cart)
 
