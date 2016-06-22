@@ -6,17 +6,13 @@
 
 * [Grand Circus](http://www.grandcircus.co/)
 
-## Week 1
+## Content
 
 * [CSS/HTML About Me Site] (https://github.com/HF-Demos/AboutMe)
 
 * [Leaflet Demo] (https://github.com/HF-Demos/LeafletDemo)
 
-## [Week 2](https://github.com/wrightmhw/HackerFellows/tree/master/week2)
+* [Angular](https://github.com/wrightmhw/hackerfellows/angular)
 
-## Week 3
-
-## Week 4
-
-## Week 5
+  * [Angular Shopping Cart] ()
 
