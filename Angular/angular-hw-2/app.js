@@ -2,6 +2,7 @@
 //  the module will contain the router and controller
 var app = angular.module('madlibModule', ['ngRoute']);
 
+
 //This will configure routes for the partial views which include
 //  home, data, and display.
 //The config takes a route provider
@@ -10,9 +11,11 @@ app.config(function($routeProvider) {
   //ngRoute provides this routeProvider
   $routeProvider
 
-    //homepage behavior
-    .when('#/', {
-    })
+    /*
+     *homepage behavior
+     *.when('#/', {
+     *})
+     */
 
   //data page controller/url
   .when('/data', {
@@ -35,57 +38,68 @@ app.config(function($routeProvider) {
     redirectTo: '/'
   });
 
-  //create factory for accessing controllers
-  app.factory('madlibFactory', function() {
+});
 
-    var noun1 = '';
-    var noun2 = '';
+//create factory for accessing controllers
+app.factory('madlibFactory', function() {
 
-    return {
+  console.log("factory loaded");
 
-      //function to get the nouns from data
-      getNouns: function() {
-        return {
-          noun1: noun1,
-          noun2: noun2
-        };
-      },
+  var noun1 = '';
+  var noun2 = '';
 
-      //function to set the nouns to display
-      setNouns: function(n1, n2) {
-        noun1 = n1;
-        noun2 = n2;
-      }
+  return {
 
-    };
+    //function to get the nouns from data
+    getNouns: function() {
+      return {
+        noun1: noun1,
+        noun2: noun2
+      };
+    },
 
-  });
-
-
-    //define our controllers for the data and display
-
-    //main controller
-    app.controller('madlibController', function($scope, $http) {
-    });
-
-  //data controller
-  app.controller('dataController', function($scope, noun1, noun2) {
-
-    $scope.submitNouns = function(value) {
-
-      // use the factory to save the nouns
-      madlibFactory.setNouns(noun1, noun2);
-
+    //function to set the nouns to display
+    setNouns: function(n1, n2) {
+      noun1 = n1;
+      noun2 = n2;
     }
 
-  });
-
-  //display controller
-  app.controller('displayController', function($scope, noun1, noun2) {
-
-      // use the factory to get the nouns
-      madlibFactory.getNouns();
-
-  });
+  };
 
 });
+
+
+//define our controllers for the data and display
+
+//main controller
+//app.controller('madlibController', function($scope, $http) {
+//});
+
+//data controller
+app.controller('dataController', function($scope, madlibFactory) {
+
+  console.log("DISPLAY");
+
+  var noun1 = madlibFactory.getNouns().noun1;
+  var noun2 = madlibFactory.getNouns().noun2;
+
+  $scope.submitNouns = function(value) {
+
+    // use the factory to save the nouns
+    madlibFactory.setNouns(noun1, noun2);
+
+  }
+
+});
+
+//display controller
+app.controller('displayController', function( $scope, madlibFactory) {
+
+
+  console.log("DISPLAY");
+
+  // use the factory to get the nouns
+  madlibFactory.getNouns();
+
+});
+
