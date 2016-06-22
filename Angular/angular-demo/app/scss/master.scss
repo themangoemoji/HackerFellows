@@ -1,0 +1,49 @@
+@import 'https://fonts.googleapis.com/css?family=Bungee|Fredoka+One|Montserrat|Sriracha';
+
+$title-font: 'Bungee', cursive;
+$text-font:'Montserrat', sans-serif;
+$off-black: #222222;
+$gutter: 30px;
+$gray: #A9A9A9;
+$white: #FFFFFF;
+$accent: #F85658;
+
+body {
+
+  $font-size: $gutter;
+  $margin: $gutter;
+  font-family: $text-font;
+  background-color: $off-black;
+  text-align: left;
+
+}
+
+.article {
+  max-width: 40em;
+  margin: 0 auto;
+}
+
+h4 {
+
+  margin: 0.2em;
+  font-size: 2em;
+  font-family: $title-font;
+  color: $gray;
+
+}
+
+h1 {
+  font-family: $title-font;
+  color: $accent;
+  font-size: 4em;
+  font-weight: 700;
+  text-align: left;
+}
+
+p {
+  text-align: left;
+  font-family: $text-font;
+  line-height: 1.6em;
+  color: $white;
+  font-weight: 400;
+}
