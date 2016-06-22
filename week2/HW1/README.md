@@ -1,0 +1,6 @@
+- [X] Create a new project (index.html, script.js, two more partial views)
+- [X] Define a module & controller for this project
+- [X] Remember to download and include ngRoute
+- [X] Define two separate routes, and an otherwise() route
+- [X] Set up a shell page with navigation for moving between both views
+- [X] In one route, show a picture of a dog. The other, should show a cat.
